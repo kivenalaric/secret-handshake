@@ -4,7 +4,7 @@ body {
   justify-content: center;
   height: 95vh;
   font-family: Georgia, "Times New Roman", Times, serif;
-  background-color: chocolate;
+  background-color: #05173f;
 }
 
 #pagecontainer {
@@ -14,10 +14,10 @@ body {
   justify-content: center;
   gap: 10px;
   margin: auto;
-  background-color: brown;
+  background-color: #4992d7;
   padding: 5%;
   border-radius: 5px;
-  box-shadow: #47474794 8px 5px;
+  box-shadow: #474747 5px 3px;
 }
 
 label {
@@ -40,6 +40,7 @@ button {
 }
 
 .display {
-  background-color: cadetblue;
+  background-color: #05173f;
   font-size: x-large;
+  color: white;
 }
