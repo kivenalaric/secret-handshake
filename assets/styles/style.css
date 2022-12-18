@@ -5,6 +5,7 @@ body {
   height: 95vh;
   font-family: Georgia, "Times New Roman", Times, serif;
   background-color: #05173f;
+  color: #03012c;
 }
 
 #pagecontainer {
@@ -14,7 +15,7 @@ body {
   justify-content: center;
   gap: 10px;
   margin: auto;
-  background-color: #4992d7;
+  background-color: #59cee0;
   padding: 5%;
   border-radius: 5px;
   box-shadow: #474747 5px 3px;
