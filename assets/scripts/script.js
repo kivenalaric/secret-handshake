@@ -6,7 +6,7 @@ const arrayGreetings = ['wink', 'double blink', 'close your eyes', 'jump']
 
 const arrayActions = (array) => {
   const filteredList = array.filter(item => item !== undefined)
-  if (filteredList.length === 0) { return displayBox.innerHTML = 'No handshakes for this number, try another' }
+  if (filteredList.length === 0) { alert('No handshakes for this number, try another') }
   filteredList.forEach((el, i, array) => {
     i === (filteredList.length - 1)
       ? array[i] = `${el}.`
@@ -18,7 +18,7 @@ const arrayActions = (array) => {
 const secretHandShake = () => {
   const shakeFriend = []
   const numberToCheck = Number(Math.floor(input.value)).toString(2)
-  if (isNaN(numberToCheck) || numberToCheck < 0) return displayBox.innerHTML = 'Please put in a number greater than 0'
+  if (isNaN(numberToCheck) || numberToCheck < 0) alert('Please put in a number greater than 0')
   const newArray = numberToCheck.toString().split('')
   const reverseArray = newArray.reverse()
   reverseArray.forEach((el, i) => {
