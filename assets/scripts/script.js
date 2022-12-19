@@ -90,8 +90,10 @@ const checkRange = (valu, arre) => {
 submitBtn.addEventListener('click', () => {
   if (inputBox.value === '') {
     displayBox.innerHTML = 'input a number there mate'
+    displayBox.style.border = '2px solid red'
   } else {
     displayBox.innerHTML = ''
+    displayBox.style.border = 'unset'
     if (inputBox.value < 16) {
       checkRange(inputBox.value, arrayOfCode)
     } else {
