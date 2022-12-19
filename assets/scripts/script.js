@@ -36,7 +36,7 @@ const convertToBinary = (val) => {
 
 const findResponse = (val, arr) => {
   const binVal = convertToBinary(val)
-  console.log(binVal)
+  // console.log(binVal)
   for (let i = 0; i < arr.length; i++) {
     if (binVal === arr[i].bin) { // calling the fxn to convert to binary
       displayBox.innerHTML += `${k > 0 ? ', ' : ''}${arr[i].response}`
@@ -88,17 +88,24 @@ const checkRange = (valu, arre) => {
 }
 
 submitBtn.addEventListener('click', () => {
-  displayBox.innerHTML = ''
-  if (inputBox.value < 16) {
-    checkRange(inputBox.value, arrayOfCode)
-  } else if (inputBox.value >= 16) {
-    if (inputBox.value === 16) {
-      displayBox.innerHTML += '! secret Code reversed'
+  if (inputBox.value === '') {
+    displayBox.innerHTML = 'input a number there mate'
+  } else {
+    displayBox.innerHTML = ''
+    if (inputBox.value < 16) {
+      checkRange(inputBox.value, arrayOfCode)
     } else {
-      revert = true
-      checkRange((inputBox.value - 16), reversedArray)
-      console.log(revert)
+      if (inputBox.value % 16 === 0) {
+        displayBox.innerHTML = '! secret code is reversed'
+      }
+      const results = Math.floor(inputBox.value / 16)
+      if (results % 2 === 0) {
+        checkRange((inputBox.value - (Math.floor(inputBox.value / 16) * 16)), arrayOfCode)
+      } else {
+        revert = true
+        checkRange((inputBox.value - (Math.floor(inputBox.value / 16) * 16)), reversedArray)
+      }
     }
+    revert = false
   }
-  revert = false
 })
